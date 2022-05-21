@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas</title>
+</head>
+<body>
+  <canvas id="content" width="800" height="800">请升级浏览器版本或者选择chrom浏览器</canvas>
+  <script>
+    let canvas = document.querySelector("#content");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    // ctx.moveTo(100, 100);
+    // ctx.lineTo(400, 400);
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 10;
+    ctx.arc(400, 400, 200, 150, Math.PI, false)
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
+    function hua(x1, y1, x2, y2, color, width) {}
+  </script>
+</body>
+</html>
