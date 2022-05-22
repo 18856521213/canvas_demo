@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>碰撞小球</title>
+</head>
+<style>
+.box{
+  display: flex;
+  justify-content: center;
+}
+</style>
+<body>
+  <div class="box">
+    <canvas id="centent" width="500" height="500"></canvas>
+  </div>
+  <script>
+    let content = document.getElementById("centent");
+    let ctx = content.getContext("2d");
+    ctx.beginPath();
+    ctx.strokeRect(0,0,500,500);
+    ctx.arc(200, 200, 10, Math.PI * 2, false);
+    ctx.fill();
+    let x = 200;
+    setInterval(() => {
+      ctx.clearRect(0, 0, 500, 500)
+      ctx.arc(x++, 200, 10, Math.PI * 2, false);
+      ctx.fill();
+    }, 50)
+    ctx.stroke();
+  </script>  
+</body>
+</html>
